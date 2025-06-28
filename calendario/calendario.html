@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Interactivo</title>
+    <link rel="stylesheet" href="./calendario.css">
+</head>
+<body>
+    <!-- Contenedor principal del calendario -->
+    <div class="calendar-container">
+        <!-- Encabezado del calendario con navegación -->
+        <div class="calendar-header">
+            <button id="prevMonth" class="nav-button">←</button>
+            <h2 id="monthYear"></h2>
+            <button id="nextMonth" class="nav-button">→</button>
+        </div>
+
+        <!-- Días de la semana -->
+        <div class="days-of-week">
+            <div>Domingo</div>
+            <div>Lunes</div>
+            <div>Martes</div>
+            <div>Miércoles</div>
+            <div>Jueves</div>
+            <div>Viernes</div>
+            <div>Sábado</div>
+        </div>
+
+        <!-- Cuadrícula para los días del mes -->
+        <div id="calendarGrid"></div>
+    </div>
+
+    <script src="funciones.js"></script>
+</body>
+</html>
