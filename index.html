@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora Tibaná, descubre sus rutas turísticas, eventos culturales y experiencias únicas">
+    <meta property="og:title" content="Tibaná Turismo - Descubre Nuestro Destino">
+    <meta property="og:description" content="Explora Tibaná, descubre sus rutas turísticas...">
+    <title>Tibaná - Turismo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header role="banner">
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="./logo.png" alt="Logo Tibaná" class="logo">
+            </div>
+            <!-- Botón para menú móvil -->
+            <button class="menu-toggle" aria-label="Menú de navegación"
+                    aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="main-nav" class="main-nav" role="navigation">
+                <ul>
+                    <li><a href="" class="active">Inicio</a></li>
+                    <li><a href="descubre_tibana/descubre-tibana.html" class="active">Descubre Tibaná</a></li>
+                    <li><a href="./Rutas/rutas.html">Rutas Turísticas</a></li>
+                    <!--<li><a href="eventos.html">Eventos</a></li>-->
+                    <li><a href="./blog/blog.html">Blog</a></li>
+                    <!--<li><a href="experiencias.html">Experiencias Turísticas</a></li>-->
+                    <!-- <li><a href="informacion.html">Información del Viajero</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="./tibana.mp4" type="video/mp4">
+        <source src="tibana-hero.webm" type="video/webm">
+        Tu navegador no soporta el elemento video.
+    </video>
+    <main>
+        <section id="descubre" class="hero-section">
+            <div class="section-separator"></div>
+            <h2>Descubre Tibaná</h2>
+            <div class="section-separator"></div>
+            <div class="content-grid">
+                <div class="grid-item fade-in">
+                    <a href="./secciones/maps.html" class="item-link"></a>
+                    <h3>Como llegar</h3>
+                    <p>Explora y conoce a Tibaná</p>
+                </div>
+                <div class="grid-item fade-in">
+                    <a href="gastronomia.html" class="item-link"></a>
+                    <h3>Gastronomía</h3>
+                    <p>Prueba los sabores auténticos de la región</p>
+                </div>
+                <div class="grid-item fade-in">
+                    <a href="fiestas-tradicionales.html" class="item-link"></a>
+                    <h3>Fiestas Tradicionales</h3>
+                    <p>Vive nuestras celebraciones culturales</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="rutas" class="routes-section">
+            <div class="section-separator"></div>
+            <h2>Rutas Turísticas</h2>
+            <div class="card-container">
+                <div class="route-card fade-in">
+                    <a href="./Rutas/rutas.html" class="item-link"></a>
+                    <img src="./imagen/cultural.JPG" alt="Ruta Turística 1" class="route-image">
+                    <h3>Ruta Cultural</h3>
+                    <p>Recorre los lugares históricos de Tibaná</p>
+                </div>
+                <div class="route-card fade-in">
+                    <a href="./Rutas/rutas.html" class="item-link"></a>
+                    <img src="./imagen/natural.jpg" alt="Ruta Turística 2" class="route-image">
+                    <h3>Ruta Natural</h3>
+                    <p>Descubre la belleza natural del territorio</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="eventos" class="events-section">
+            <div class="section-separator"></div>
+            <h2>Eventos</h2>
+            <div class="events-grid">
+                <div class="event-card fade-in">
+                    <a href="ruta-natural.html" class="item-link"></a>
+                    <h3>Festival Cultural</h3>
+                    <p>Fecha: 15 de Julio</p>
+                    <p>Lugar: Plaza Principal</p>
+                </div>
+                <div class="event-card fade-in">
+                    <a href="ruta-natural.html" class="item-link"></a>
+                    <h3>Feria Artesanal</h3>
+                    <p>Fecha: 22 de Agosto</p>
+                    <p>Lugar: Centro Comercial</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog-section">
+            <div class="section-separator"></div>
+            <h2>Blog</h2>
+            <div class="blog-posts">
+                <article class="blog-post fade-in">
+                    <a href="ruta-natural.html" class="item-link"></a>
+                    <h3>Las Mejores Rutas de Senderismo</h3>
+                    <p>Descubre los mejores caminos para explorar Tibaná</p>
+                </article>
+                <article class="blog-post fade-in">
+                    <a href="ruta-natural.html" class="item-link"></a>
+                    <h3>Gastronomía Local</h3>
+                    <p>Conoce los platos típicos de la región</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="logo-container footer-logo">
+                <img src="./imagen/alcaldia.png" alt="Logo Tibaná Footer" class="footer-logo-img">
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: alcaldia@tibana-boyaca.gov.co</p>
+                <p>Teléfono: +57 315 4583618</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/share/1K9k92Pa6M/?mibextid=wwXIfr">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/alcaldiatibana?igsh=MXA0OGN2YW5iaXF2dg==">Instagram</a></li>
+                
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="#descubre">Descubre Tibaná</a></li>
+                    <li><a href="#rutas">Rutas Turísticas</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Tibaná Turismo. Todos los derechos reservados. William Tomás Galindo Borda 2024-2027</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
