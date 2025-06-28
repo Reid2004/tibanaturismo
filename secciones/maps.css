@@ -1,0 +1,302 @@
+/* Variables */
+:root {
+    --primary-blue: rgba(0, 51, 153, 0.6);
+    --secondary-blue: #003366;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --section-bg: #ffffff;
+    --card-bg: #f8f8f8;
+}
+
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Separadores visuales */
+.section-separator {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--light-gray), transparent);
+    margin: 40px 0;
+    opacity: 0.3;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-blue);
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.header-top {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 120px 20px;
+    background: linear-gradient(
+        110deg,
+        var(--primary-blue),
+        transparent 200%
+    );
+    text-align: center;
+    color: #003366;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, white, transparent);
+    z-index: -1;
+}
+
+/* Mapa y sección de llegada */
+#map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.arrival-instructions {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.routes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.route-card {
+    background: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.route-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.route-card h4 {
+    color: var(--secondary-blue);
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(
+        to bottom,
+        var(--light-gray),
+        white
+    );
+    color: var(--text-color);
+    padding: 40px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.footer-section {
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.copyright {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    padding: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Menú Responsivo */
+.main-nav {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: var(--primary-blue);
+    width: 250px;
+    padding: 20px;
+    display: none;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+}
+
+.menu-toggle {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+    display: none;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-nav a {
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    .hero-section {
+        padding: 80px 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .routes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .route-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .main-nav {
+        display: flex;
+        position: static;
+        background-color: transparent;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+    }
+}
+
+/* Efectos de Scroll */
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* No scroll cuando el menú está abierto */
+.no-scroll {
+    overflow: hidden;
+}
+/* Nuevas clases para los enlaces clickeables */
+.item-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.footer-logo {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.footer-logo-img {
+    max-width: 200px;
+    height: auto;
+}
